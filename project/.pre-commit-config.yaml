@@ -2,6 +2,9 @@
 # See https://pre-commit.com/hooks.html for more hooks
 exclude: "CHANGELOG.md|.copier-answers.yml|.all-contributorsrc|project"
 default_stages: [pre-commit]
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
 
 ci:
   autofix_commit_msg: "chore(pre-commit.ci): auto fixes"
@@ -56,3 +59,9 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies: []
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.0.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args: []
