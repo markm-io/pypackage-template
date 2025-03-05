@@ -61,7 +61,7 @@ dev = [
 ]
 {%- if documentation %}
 docs = [
-  "furo>=2023.5.20; python_version>='3.11'",
+  "sphinx-wagtail-theme>=6.5.0; python_version>='3.11'",
   "myst-parser>=0.16; python_version>='3.11'",
   "sphinx>=4; python_version>='3.11'",
   "sphinx-autobuild>=2024,<2025; python_version>='3.11'",
@@ -70,10 +70,9 @@ docs = [
 
 [tool.ruff]
 target-version = "py39"
-line-length = 88
+line-length = 120
 lint.select = [
   "B",   # flake8-bugbear
-  "D",   # flake8-docstrings
   "C4",  # flake8-comprehensions
   "S",   # flake8-bandit
   "F",   # pyflake
