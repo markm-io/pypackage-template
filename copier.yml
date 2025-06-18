@@ -73,6 +73,11 @@ cli_name:
   default: "{{ project_slug }}"
   when: "{{ has_cli }}"
 
+build_docker_image:
+  type: bool
+  help: "Build Docker image and publish to GitHub Container Registry?"
+  default: no
+
 run_uv_sync:
   type: bool
   help: "Run uv sync install after {{ package_name }} generation?"

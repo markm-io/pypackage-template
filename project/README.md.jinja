@@ -49,6 +49,31 @@
 Install this via pip (or your favourite package manager):
 
 `pip install {{ project_slug }}`
+{%- if build_docker_image %}
+
+### Docker
+
+Docker images are available from GitHub Container Registry:
+
+```bash
+docker pull ghcr.io/{{ github_username }}/{{ project_slug }}:latest
+```
+{%- if has_cli %}
+
+Run the CLI using Docker:
+
+```bash
+docker run --rm ghcr.io/{{ github_username }}/{{ project_slug }}:latest --help
+```
+{%- else %}
+
+Run Python with the package available:
+
+```bash
+docker run --rm -it ghcr.io/{{ github_username }}/{{ project_slug }}:latest
+```
+{%- endif %}
+{%- endif %}
 {%- if is_django_package %}
 
 Add the app to your `INSTALLED_APPS`:
