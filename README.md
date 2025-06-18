@@ -1,6 +1,6 @@
 # Python Package Template
 
-[![CI Status](https://img.shields.io/github/actions/workflow/status/browniebroke/pypackage-template/ci.yml?branch=main&label=Test&logo=github&style=flat-square)](https://github.com/browniebroke/pypackage-template/actions/workflows/ci.yml?query=branch%3Amain)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/markm-io/pypackage-template/ci.yml?branch=main&label=Test&logo=github&style=flat-square)](https://github.com/markm-io/pypackage-template/actions/workflows/ci.yml?query=branch%3Amain)
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json)](https://github.com/copier-org/copier)
 
 Project template for a Python Package using Copier.
@@ -28,7 +28,7 @@ Project template for a Python Package using Copier.
 Generate a new project with:
 
 ```shell
-copier copy --trust "gh:browniebroke/pypackage-template" path-to-project
+copier copy --trust "gh:markm-io/pypackage-template" path-to-project
 ```
 
 This will prompt you for a few questions and create new directory with the name you used as project slug.
@@ -167,12 +167,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://browniebroke.com/"><img src="https://avatars.githubusercontent.com/u/861044?v=4?s=80" width="80px;" alt="Bruno Alla"/><br /><sub><b>Bruno Alla</b></sub></a><br /><a href="https://github.com/browniebroke/pypackage-template/commits?author=browniebroke" title="Code">💻</a> <a href="#ideas-browniebroke" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/browniebroke/pypackage-template/commits?author=browniebroke" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://cloudreactor.io/"><img src="https://avatars.githubusercontent.com/u/1079646?v=4?s=80" width="80px;" alt="Jeff Tsay"/><br /><sub><b>Jeff Tsay</b></sub></a><br /><a href="https://github.com/browniebroke/pypackage-template/commits?author=jtsay362" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/34j"><img src="https://avatars.githubusercontent.com/u/55338215?v=4?s=80" width="80px;" alt="34j"/><br /><sub><b>34j</b></sub></a><br /><a href="https://github.com/browniebroke/pypackage-template/commits?author=34j" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kroimon"><img src="https://avatars.githubusercontent.com/u/628587?v=4?s=80" width="80px;" alt="Stefan Rado"/><br /><sub><b>Stefan Rado</b></sub></a><br /><a href="https://github.com/browniebroke/pypackage-template/commits?author=kroimon" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/codejedi365"><img src="https://avatars.githubusercontent.com/u/17354856?v=4?s=80" width="80px;" alt="codejedi365"/><br /><sub><b>codejedi365</b></sub></a><br /><a href="https://github.com/browniebroke/pypackage-template/commits?author=codejedi365" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.habet.dev"><img src="https://avatars.githubusercontent.com/u/82916197?v=4?s=80" width="80px;" alt="Abe Hanoka"/><br /><sub><b>Abe Hanoka</b></sub></a><br /><a href="https://github.com/browniebroke/pypackage-template/issues?q=author%3Aabe-101" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://browniebroke.com/"><img src="https://avatars.githubusercontent.com/u/861044?v=4?s=80" width="80px;" alt="Bruno Alla"/><br /><sub><b>Bruno Alla</b></sub></a><br /><a href="https://github.com/markm-io/pypackage-template/commits?author=browniebroke" title="Code">💻</a> <a href="#ideas-browniebroke" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/markm-io/pypackage-template/commits?author=browniebroke" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://cloudreactor.io/"><img src="https://avatars.githubusercontent.com/u/1079646?v=4?s=80" width="80px;" alt="Jeff Tsay"/><br /><sub><b>Jeff Tsay</b></sub></a><br /><a href="https://github.com/markm-io/pypackage-template/commits?author=jtsay362" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/34j"><img src="https://avatars.githubusercontent.com/u/55338215?v=4?s=80" width="80px;" alt="34j"/><br /><sub><b>34j</b></sub></a><br /><a href="https://github.com/markm-io/pypackage-template/commits?author=34j" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kroimon"><img src="https://avatars.githubusercontent.com/u/628587?v=4?s=80" width="80px;" alt="Stefan Rado"/><br /><sub><b>Stefan Rado</b></sub></a><br /><a href="https://github.com/markm-io/pypackage-template/commits?author=kroimon" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/codejedi365"><img src="https://avatars.githubusercontent.com/u/17354856?v=4?s=80" width="80px;" alt="codejedi365"/><br /><sub><b>codejedi365</b></sub></a><br /><a href="https://github.com/markm-io/pypackage-template/commits?author=codejedi365" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.habet.dev"><img src="https://avatars.githubusercontent.com/u/82916197?v=4?s=80" width="80px;" alt="Abe Hanoka"/><br /><sub><b>Abe Hanoka</b></sub></a><br /><a href="https://github.com/markm-io/pypackage-template/issues?q=author%3Aabe-101" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
