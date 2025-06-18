@@ -7,7 +7,7 @@ Project template for a Python Package using Copier.
 
 ## Features
 
-- Project for Python 3.9+.
+- Project for Python 3.12+.
 - Testing with Pytest using GitHub actions.
 - Packaging powered by [uv].
 - Optionally generates a CLI entry point powered by [Typer] and [Rich].
@@ -56,7 +56,7 @@ Check out the [uv] documentation for more information on the available commands.
 
 When you first push to GitHub, it'll start a `ci` GitHub workflow that you can see in the "Actions" tab of your repository. This workflow runs a couple of jobs:
 
-- The `test` job will run your test suite with Pytest against all Python version from 3.8 to 3.11
+- The `test` job will run your test suite with Pytest against Python versions 3.12 and 3.13
 - A few things will run in the lint job:
   - Ruff format
   - Ruff lint with several flake8, isort and pyupgrade plugins.
