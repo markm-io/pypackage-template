@@ -105,6 +105,23 @@ Here is an overview of what it's doing:
 
 For more details, check out the [conventional commits website][conventional-commits] and [Python semantic release][python-semantic-release] GitHub action.
 
+### Docker Image Building
+
+If you choose to enable Docker image building during project generation, the template will automatically build and publish Docker images to GitHub Container Registry (ghcr.io) on each release.
+
+#### Setup Requirements
+
+1. **No additional secrets needed** - The workflow uses the built-in `GITHUB_TOKEN` which automatically has permissions to publish to GitHub Container Registry for your repository.
+
+2. **Repository package permissions** - Make sure your repository allows writing packages. This is usually enabled by default, but you can check in your repository settings under "Actions" → "General" → "Workflow permissions".
+
+#### What gets created
+
+- `Dockerfile` - Optimized multi-stage build using Python 3.12 slim image and uv for fast dependency installation
+- `.dockerignore` - Excludes unnecessary files from the Docker build context
+- GitHub Actions workflow job that builds and pushes images on each release
+- Automatic Docker image tagging with both the release version and `latest`
+
 ### Optional: Django package
 
 If your package is a reusable Django app, you should answer "yes" to the question "Is the project a Django package?". This will generate a bit more boilerplate for you to make it easier to develop and test:
