@@ -78,6 +78,16 @@ build_docker_image:
   help: "Build Docker image and publish to GitHub Container Registry?"
   default: no
 
+enable_testing:
+  type: bool
+  help: "Enable Python testing with pytest?"
+  default: yes
+
+enable_type_checking:
+  type: bool
+  help: "Enable Python type checking with mypy?"
+  default: yes
+
 run_uv_sync:
   type: bool
   help: "Run uv sync install after {{ package_name }} generation?"

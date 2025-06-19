@@ -50,12 +50,18 @@ scripts.{{ cli_name }} = "{{ package_name }}.cli:app"
 
 [dependency-groups]
 dev = [
+{%- if enable_testing %}
   "coverage",
   "pytest>=8,<9",
 {%- if is_django_package  %}
   "pytest-django>=4.5,<5",
 {%- else  %}
   "pytest-cov>=6,<7",
+{%- endif %}
+{%- endif %}
+{%- if enable_type_checking %}
+{%- if enable_testing %},
+  {% endif %}"mypy>=1.0",
 {%- endif %}
 ]
 {%- if documentation %}
@@ -104,6 +110,8 @@ lint.per-file-ignores."tests/**/*" = [
 ]
 lint.isort.known-first-party = [ "{{ package_name }}", "tests" ]
 
+{%- if enable_testing %}
+
 [tool.pytest.ini_options]
 addopts = """\
     -v
@@ -117,6 +125,9 @@ addopts = """\
 {%- endif  %}
     """
 pythonpath = [ "src" ]
+{%- endif %}
+
+{%- if enable_testing %}
 
 [tool.coverage.run]
 branch = true
@@ -139,6 +150,9 @@ exclude_lines = [
   "raise NotImplementedError",
   'if __name__ == "__main__":',
 ]
+{%- endif %}
+
+{%- if enable_type_checking %}
 
 [tool.mypy]
 check_untyped_defs = true
@@ -165,6 +179,7 @@ allow_untyped_defs = true
 [[tool.mypy.overrides]]
 module = "docs.*"
 ignore_errors = true
+{%- endif %}
 {%- endif %}
 
 [tool.semantic_release]

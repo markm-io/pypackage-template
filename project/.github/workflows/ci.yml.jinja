@@ -13,6 +13,8 @@ concurrency:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,12 +27,15 @@ jobs:
   commitlint:
     name: Lint Commit Messages
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v6.0.1
 
+{% if enable_testing %}
   test:
     strategy:
       fail-fast: false
@@ -43,6 +48,8 @@ jobs:
           - windows-latest
           - macOS-latest
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4{% endraw %}
 {%- if is_django_package %}{% raw %}
@@ -67,16 +74,27 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - run: uv sync --no-python-downloads
         shell: bash
+{%- if enable_testing %}
       - run: uv run pytest
-        shell: bash{% endraw %}
+        shell: bash
+{%- endif %}
+{%- if enable_type_checking %}
+      - run: uv run mypy src/
+        shell: bash
+{%- endif %}{% endraw %}
 {%- endif  %}{% raw %}
+{%- if enable_testing %}
       - uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+{%- endif %}
+{% endif %}
 
   release:
     needs:
+{%- if enable_testing %}
       - test
+{%- endif %}
       - lint
       - commitlint
 
@@ -84,9 +102,9 @@ jobs:
     environment: release
     concurrency: release
     permissions:
+      contents: write
       id-token: write
       attestations: write
-      contents: write
 
     steps:
       - uses: actions/checkout@v4

@@ -57,8 +57,10 @@ repos:
     rev: v2.4.1
     hooks:
       - id: codespell
+{%- if enable_type_checking %}
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.16.1
     hooks:
       - id: mypy
         additional_dependencies: []
+{%- endif %}
