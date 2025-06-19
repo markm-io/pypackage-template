@@ -56,13 +56,13 @@ jobs:
         extra_options:
           - project_name: "Simple Package"
             project_slug: "simple-package"
-            value: "--data 'add_me_as_contributor=yes'"
+            value: "--data 'add_me_as_contributor=yes' --data 'enable_testing=yes' --data 'enable_type_checking=yes'"
           - project_name: "Simple CLI"
             project_slug: "simple-cli"
-            value: "--data 'has_cli=yes' --data 'cli_name=mycli'"
+            value: "--data 'has_cli=yes' --data 'cli_name=mycli' --data 'enable_testing=yes' --data 'enable_type_checking=yes'"
           - project_name: "Django Package"
             project_slug: "django-simple-package"
-            value: "--data 'is_django_package=yes' --data 'documentation=yes'"
+            value: "--data 'is_django_package=yes' --data 'documentation=yes' --data 'enable_testing=yes' --data 'enable_type_checking=yes'"
     runs-on: ubuntu-latest
     name: "Generated: ${{ matrix.script.name }} ${{ matrix.extra_options.project_name }}"
     steps:

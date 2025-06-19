@@ -128,5 +128,12 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Test projects generated during development
+test-project/
+test-*/
+
+# uv lock file
+uv.lock
+
 # File normally ignored that we want to commit
 !project/.idea/
